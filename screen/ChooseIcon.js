@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import styled from 'styled-components/native';
-import {View} from 'react-native';
+import {View,Platform} from 'react-native';
 import Avatar from '../components/Avatar';
 
 const Screen = styled.View`
@@ -71,7 +71,7 @@ const ChooseIcon = (props) => {
       </View>
       <Label>Create your avatar</Label>
       <Button
-        color="#1a1718"
+        color={Platform.OS === 'ios' ? 'white' : "#1a1718"}
         title="CAMERA"
         onPress={() => {
           props.navigation.navigate('Camera', {
