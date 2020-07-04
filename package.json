@@ -1,4 +1,10 @@
 {
+	"author": {
+		"name": "Diego Fernandes Paz",
+		"email": "diegofernandes14@hotmail.com",
+		"url": "https://github.com/fernandespaz"
+	  },
+	"version": "1.0.0", 
 	"main": "node_modules/expo/AppEntry.js",
 	"scripts": {
 		"start": "expo start",
@@ -8,6 +14,7 @@
 		"eject": "expo eject"
 	},
 	"dependencies": {
+		"@react-native-community/geolocation": "^2.0.2",
 		"@react-native-community/masked-view": "0.1.6",
 		"@react-navigation/bottom-tabs": "^5.5.2",
 		"@react-navigation/native": "^5.5.1",
@@ -31,4 +38,5 @@
 		"babel-preset-expo": "^8.1.0"
 	},
 	"private": true
+	
 }
