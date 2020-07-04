@@ -6,7 +6,10 @@ import ProfileToEdit from './screen/ProfileToEdit';
 import ChooseIcon from './screen/ChooseIcon';
 import Camera from './screen/Camera';
 import Tab from './routes/Tabs';
+import {Geolocation} from './services/movieFilter2';
 
+
+Geolocation();
 const Stack = createStackNavigator();
 
 const App = () => {
