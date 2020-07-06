@@ -1,18 +1,18 @@
 
 import React, {PureComponent} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import {Camera} from 'expo-camera';
+import { RNCamera} from 'react-native-camera';
 
 export default class CameraScreen extends React.Component{
  
   constructor(props){
     super(props);
-    this.state = {type:Camera.Constants.Type.back, hasPermission: null};
+    this.state = {type:RNCamera.Constants.Type.back, hasPermission: null};
   }
 
   ComponentDidMount(){
     const handlePermission = async () => {
-      const { status } = await Camera.requestPermissionsAsync();
+      const { status } = await RNCamera.requestPermissionsAsync();
       this.setState({hasPermission: status === 'granted'});
     }
     handlePermission();
@@ -22,7 +22,7 @@ export default class CameraScreen extends React.Component{
   render() {
     return (
       <View style={{ flex: 1 }}>
-        <Camera 
+        <RNCamera 
         ref={ref => {
           this.camera = ref;
         }}
@@ -54,7 +54,7 @@ export default class CameraScreen extends React.Component{
               <Text style={{ fontSize: 18, marginBottom: 10, color: 'white' }}> Flip </Text>
             </TouchableOpacity>
           </View>
-        </Camera>
+        </RNCamera>
       </View>
     );
   }
