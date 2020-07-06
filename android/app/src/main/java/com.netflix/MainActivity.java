@@ -1,4 +1,4 @@
-package netflix;
+package com.netflix;
 
 import android.os.Bundle;
 

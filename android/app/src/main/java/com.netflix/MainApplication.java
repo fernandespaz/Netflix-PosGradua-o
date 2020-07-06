@@ -1,4 +1,4 @@
-package netflix;
+package com.netflix;
 
 import android.app.Application;
 import android.content.Context;
@@ -10,8 +10,9 @@ import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
-import netflix.generated.BasePackageList;
+import com.netflix.generated.BasePackageList;
 
+import com.devfd.RNGeocoder.RNGeocoderPackage;
 import org.unimodules.adapters.react.ReactAdapterPackage;
 import org.unimodules.adapters.react.ModuleRegistryAdapter;
 import org.unimodules.adapters.react.ReactModuleRegistryProvider;
@@ -42,7 +43,9 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       List<ReactPackage> packages = new PackageList(this).getPackages();
       packages.add(new ModuleRegistryAdapter(mModuleRegistryProvider));
-      return packages;
+      return Arrays.<ReactPackage>asList(
+              new MainReactPackage(),
+              new RNGeocoderPackage());
     }
 
     @Override
