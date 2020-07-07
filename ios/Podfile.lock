@@ -35,7 +35,7 @@ PODS:
   - EXUpdates (0.2.11):
     - React
     - UMCore
-  - EXWebBrowser (8.2.0):
+  - EXWebBrowser (8.2.1):
     - UMCore
   - FBLazyVector (0.61.5)
   - FBReactNativeSpec (0.61.5):
@@ -226,6 +226,10 @@ PODS:
     - React
   - react-native-camera/RN (3.31.0):
     - React
+  - react-native-geocoder (0.5.0):
+    - React
+  - react-native-geolocation (2.0.2):
+    - React
   - react-native-safe-area-context (0.7.3):
     - React
   - React-RCTActionSheet (0.61.5):
@@ -321,6 +325,8 @@ DEPENDENCIES:
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - react-native-camera (from `../node_modules/react-native-camera`)
+  - react-native-geocoder (from `../node_modules/react-native-geocoder`)
+  - react-native-geolocation (from `../node_modules/@react-native-community/geolocation`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../node_modules/react-native/Libraries/NativeAnimation`)
@@ -337,11 +343,11 @@ DEPENDENCIES:
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
-  - UMAppLoader (from `../node_modules/react-native-unimodules/node_modules/unimodules-app-loader/ios`)
+  - UMAppLoader (from `../node_modules/unimodules-app-loader/ios`)
   - UMBarCodeScannerInterface (from `../node_modules/unimodules-barcode-scanner-interface/ios`)
   - UMCameraInterface (from `../node_modules/unimodules-camera-interface/ios`)
   - UMConstantsInterface (from `../node_modules/unimodules-constants-interface/ios`)
-  - UMCore (from `../node_modules/react-native-unimodules/node_modules/@unimodules/core/ios`)
+  - UMCore (from `../node_modules/@unimodules/core/ios`)
   - UMFaceDetectorInterface (from `../node_modules/unimodules-face-detector-interface/ios`)
   - UMFileSystemInterface (from `../node_modules/unimodules-file-system-interface/ios`)
   - UMFontInterface (from `../node_modules/unimodules-font-interface/ios`)
@@ -409,6 +415,10 @@ EXTERNAL SOURCES:
     :path: ../node_modules/react-native/ReactCommon/jsinspector
   react-native-camera:
     :path: ../node_modules/react-native-camera
+  react-native-geocoder:
+    :path: ../node_modules/react-native-geocoder
+  react-native-geolocation:
+    :path: ../node_modules/@react-native-community/geolocation
   react-native-safe-area-context:
     :path: ../node_modules/react-native-safe-area-context
   React-RCTActionSheet:
@@ -440,7 +450,7 @@ EXTERNAL SOURCES:
   RNScreens:
     :path: ../node_modules/react-native-screens
   UMAppLoader:
-    :path: ../node_modules/react-native-unimodules/node_modules/unimodules-app-loader/ios
+    :path: ../node_modules/unimodules-app-loader/ios
   UMBarCodeScannerInterface:
     :path: ../node_modules/unimodules-barcode-scanner-interface/ios
   UMCameraInterface:
@@ -448,7 +458,7 @@ EXTERNAL SOURCES:
   UMConstantsInterface:
     :path: ../node_modules/unimodules-constants-interface/ios
   UMCore:
-    :path: ../node_modules/react-native-unimodules/node_modules/@unimodules/core/ios
+    :path: ../node_modules/@unimodules/core/ios
   UMFaceDetectorInterface:
     :path: ../node_modules/unimodules-face-detector-interface/ios
   UMFileSystemInterface:
@@ -498,6 +508,8 @@ SPEC CHECKSUMS:
   React-jsiexecutor: 752f034d0f007d1141a1c52ba9ef3fd9668fbfa7
   React-jsinspector: 044105eea064aec81adc5e4d777a8f6589e7d094
   react-native-camera: 9c50d7def800895e7991ccda6203929553ceec9c
+  react-native-geocoder: 33b16a5929aa868fef37acb4f7ee10a428cd5fff
+  react-native-geolocation: 8710b1bae31e734191273344d52141151b94bb3f
   react-native-safe-area-context: 686e5d98bb021d8ca415ec5cf2a30dfc0d7d0d93
   React-RCTActionSheet: 49433f6e3659ba5d3ee650e44b9c18743ef9a7fc
   React-RCTAnimation: 12f86a4e3542032329366b03bca2cc254a7c64a9

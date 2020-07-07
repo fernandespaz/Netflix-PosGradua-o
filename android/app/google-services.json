@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "819473057902",
+    "firebase_url": "https://react-native-netflix-bd951.firebaseio.com",
+    "project_id": "react-native-netflix-bd951",
+    "storage_bucket": "react-native-netflix-bd951.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:819473057902:android:b8801c239ee08603fb7e7f",
+        "android_client_info": {
+          "package_name": "com.netflix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "819473057902-otbm4e81qruipndcl602avdrroqfk0r9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.netflix",
+            "certificate_hash": "ee3b63c7197f167c9360f82945bddd68b9a77866"
+          }
+        },
+        {
+          "client_id": "819473057902-ba9d9nc1eas27c48gke89jpok8c56blr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEbUYJAvO0CIc8qQEaA3qaTLu29R_LV3s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "819473057902-ba9d9nc1eas27c48gke89jpok8c56blr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
