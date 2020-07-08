@@ -42,7 +42,7 @@ const Movies = (props) => {
     },
   });
 
-  console.log(props.data); 
+ 
 
   return (
     <Container>

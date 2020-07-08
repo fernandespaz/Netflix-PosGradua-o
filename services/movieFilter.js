@@ -27,7 +27,7 @@ export const filterByCountry = async (movies, geolocation)  => {
             item.Country.indexOf(location[0].country) !== -1 ||
             item.Country.indexOf(location[0].countryCode) !== -1);
     });
-    console.log('Chegouuu', movies.filter);
+    
     return national;
 };
 

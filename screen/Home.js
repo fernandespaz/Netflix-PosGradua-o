@@ -93,8 +93,8 @@ const Home = () => {
 						}}*/ />
 					</Gradient>
 				</AnimatedPoster>
-				<Movies label='Recomendados' data={movies} />
-				<Movies label='Nacionais' data={nationalMovies} />
+				<Movies label='Recomendados' data={nationalMovies} />
+				<Movies label='Nacionais' data={movies} />
 				{user ? <Movies label={labelProfile} data={allMovies} /> : <View />}
 			</Container>
 		</>
