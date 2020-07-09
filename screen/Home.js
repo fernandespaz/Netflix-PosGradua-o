@@ -27,9 +27,10 @@ const Gradient = styled(LinearGradient)`
 `
 
 const Home = () => {
+
 	const [movies, setMovies] = useState([]);
 	const [nationalMovies, setNationalMovies] = useState([]);
-	const [allMovies, setAllMovies] = useState([]);
+	const [moviesProfile, setMoviesProfile] = useState([]);
 	const {user, setUser} = useContext(ProfileContext);
 	const [labelProfile, setLabelProfile] = useState('');
 
@@ -38,6 +39,13 @@ const Home = () => {
 			setLabelProfile(null);
 			if (user != null) {
 				setLabelProfile(`Continue assistindo como ${user}`);
+				const fileJson = require('../assets/Movies.json');
+
+				Object.keys(fileJson).forEach(function(key) {
+					if (key == user) {
+						setMoviesProfile(fileJson[key]);
+					}
+				});
 			}
 		}
 		label();
@@ -45,24 +53,29 @@ const Home = () => {
 
 	useEffect(() => {
 		const loadingMovies = async () => {
-			const moviesJson = require('../assets/Movies.json');
-			setAllMovies(moviesJson);
+			const fileJson = require('../assets/Movies.json');
 			const position = await getLocation();
-			const nationalCountries = await filterByCountry(moviesJson, position);
-			setNationalMovies(nationalCountries);
+			var nationalCountries;
+			const keys = Object.keys(fileJson);
 
-			const nationalCountriesTitle = nationalCountries.map(
-				(item, index) => item.Title,
-			);
+			Object.keys(fileJson).forEach(async function(key) {
+				const element = fileJson[key];
+				nationalCountries = await filterByCountry(element, position);
+				setNationalMovies(nationalMovies => nationalMovies.concat(nationalCountries));
 
-			moviesWithoutNationals = moviesJson.filter((item, index) => {
-				return !nationalCountriesTitle.includes(item.Title)
+				const nationalCountriesTitle = nationalCountries.map(
+					(item, index) => item.Title,
+				);
+
+				moviesWithoutNationals = element.filter((item, index) => {
+					return !nationalCountriesTitle.includes(item.Title)
+				});
+				setMovies(movies => movies.concat(moviesWithoutNationals));
 			});
-			setMovies(moviesWithoutNationals);
+
 		};
 		loadingMovies();
-  }, []);
- 
+	}, []);
 
 	// const PosterConfigs = useSpring({
 	// 	duration: 3000,
@@ -93,9 +106,9 @@ const Home = () => {
 						}}*/ />
 					</Gradient>
 				</AnimatedPoster>
+				{user ? <Movies label={labelProfile} data={moviesProfile} /> : <View />}
 				<Movies label='Recomendados' data={nationalMovies} />
 				<Movies label='Nacionais' data={movies} />
-				{user ? <Movies label={labelProfile} data={allMovies} /> : <View />}
 			</Container>
 		</>
 	)
